@@ -1,28 +1,19 @@
-            // Простое общение с пользователем
-"use strict";
+const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрлели?', '');
+
+const personalMovieDB = {
+  count: numberOfFilms,
+  movies: {},
+  actors: {},
+  genres: [],
+  privat: false,
+};
 
 
-/* const result = confirm("Are you here?");   
-console.log(result); */
+const a = prompt('Один из последних просмотренных фильмов?', ''),
+      b = prompt('На сколько его оцените?', ''),
+      c = prompt('Один из последних просмотренных фильмов?', ''),
+      d = prompt('На сколько его оцените?', '');
 
-
-/* const age = +prompt("You are 18 years old?", "10");
-console.log(age + 5); */
-
-/* const answers = [];
-
-answers[0] = prompt("Как ваше Имя?", "");
-answers[1] = prompt("Как ваше Фамилия?", "");
-answers[2] = prompt("Сколько вам лет?", "");
-
-document.write(answers); */
-
-
-  //Урок 008 Интерполяция
-const category = 'toys';
-console.log(`https://google.com/${category}/5`);
-// если мы хотим сложить две строки оборачиваем косыми скобками `https://google.com/ пишем знак $ и оборачиваем {нашу переменную} `
-
-
-let user = 'Ivan';
-alert(`Hello, ${user}`);
+personalMovieDB.movies[a] = b;
+personalMovieDB.movies[c] = d;
+console.log(personalMovieDB);
